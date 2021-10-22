@@ -4,58 +4,59 @@ let numberSaved = document.getElementById("NumberSavedHTML");
 let historyEl = document.getElementById("history-el");
 let MessageEl = document.getElementById("message-el");
 
-let num1 = 5;
-let num2 = 8;
+let num1 = 8;
+let num2 = 4;
 let result = document.getElementById("resultat");
 
 var myMusic = new Audio("mj.mp3");
 
-document.getElementById("boutonAjouter").style.visibility = "hidden";
-document.getElementById("boutonSoustraire").style.visibility = "hidden";
-document.getElementById("boutonMultiplier").style.visibility = "hidden";
-document.getElementById("boutonDiviser").style.visibility = "hidden";
-document.getElementById("numberOnScreen").style.visibility = "hidden";
-document.getElementById("NumberSavedHTML").style.visibility = "hidden";
-document.getElementById("AddingButton").style.visibility = "hidden";
-document.getElementById("SaveButton").style.visibility = "hidden";
-document.getElementById("history-el").style.visibility = "hidden";
-document.getElementById("MainMenuButton").style.visibility = "hidden";
+document.getElementById("boutonAjouter").style.display = "none";
+document.getElementById("boutonSoustraire").style.display = "none";
+document.getElementById("boutonMultiplier").style.display = "none";
+document.getElementById("boutonDiviser").style.display = "none";
+document.getElementById("numberOnScreen").style.display = "none";
+document.getElementById("NumberSavedHTML").style.display = "none";
+document.getElementById("AddingButton").style.display = "none";
+document.getElementById("SaveButton").style.display = "none";
+document.getElementById("history-el").style.display = "none";
+document.getElementById("MainMenuButton").style.display = "none";
 
 function Back() {
   myMusic.pause();
   MessageEl.innerText = "";
-  document.getElementById("StartingButton").style.visibility = "visible";
-  document.getElementById("PlayARound").style.visibility = "visible";
-  document.getElementById("MainMenuButton").style.visibility = "hidden";
+  document.getElementById("StartingButton").style.display = "inline";
+  document.getElementById("PlayARound").style.display = "block";
+  document.getElementById("MainMenuButton").style.display = "none";
 
-  document.getElementById("boutonAjouter").style.visibility = "hidden";
-  document.getElementById("boutonAjouter").style.visibility = "hidden";
-  document.getElementById("boutonSoustraire").style.visibility = "hidden";
-  document.getElementById("boutonMultiplier").style.visibility = "hidden";
-  document.getElementById("boutonDiviser").style.visibility = "hidden";
-  document.getElementById("numberOnScreen").style.visibility = "hidden";
-  document.getElementById("NumberSavedHTML").style.visibility = "hidden";
-  document.getElementById("AddingButton").style.visibility = "hidden";
-  document.getElementById("SaveButton").style.visibility = "hidden";
-  document.getElementById("history-el").style.visibility = "hidden";
+  document.getElementById("boutonAjouter").style.display = "none";
+  document.getElementById("boutonAjouter").style.display = "none";
+  document.getElementById("boutonSoustraire").style.display = "none";
+  document.getElementById("boutonMultiplier").style.display = "none";
+  document.getElementById("boutonDiviser").style.display = "none";
+  document.getElementById("numberOnScreen").style.display = "none";
+  document.getElementById("NumberSavedHTML").style.display = "none";
+  document.getElementById("AddingButton").style.display = "none";
+  document.getElementById("SaveButton").style.display = "none";
+  document.getElementById("history-el").style.display = "none";
 }
 function Start() {
   myMusic.play();
-  document.getElementById("StartingButton").style.visibility = "hidden";
-  document.getElementById("PlayARound").style.visibility = "hidden";
+  document.getElementById("StartingButton").style.display = "none";
+  document.getElementById("PlayARound").style.display = "none";
 
-  document.getElementById("MainMenuButton").style.visibility = "visible";
-  document.getElementById("boutonAjouter").style.visibility = "visible";
-  document.getElementById("boutonAjouter").style.visibility = "visible";
-  document.getElementById("boutonSoustraire").style.visibility = "visible";
-  document.getElementById("boutonMultiplier").style.visibility = "visible";
-  document.getElementById("boutonDiviser").style.visibility = "visible";
-  document.getElementById("numberOnScreen").style.visibility = "visible";
-  document.getElementById("NumberSavedHTML").style.visibility = "visible";
-  document.getElementById("AddingButton").style.visibility = "visible";
-  document.getElementById("SaveButton").style.visibility = "visible";
-  document.getElementById("history-el").style.visibility = "visible";
+  document.getElementById("MainMenuButton").style.display = "inline";
+  document.getElementById("boutonAjouter").style.display = "inline";
+  document.getElementById("boutonAjouter").style.display = "inline";
+  document.getElementById("boutonSoustraire").style.display = "inline";
+  document.getElementById("boutonMultiplier").style.display = "inline";
+  document.getElementById("boutonDiviser").style.display = "inline";
+  document.getElementById("numberOnScreen").style.display = "block";
+  document.getElementById("NumberSavedHTML").style.display = "block";
+  document.getElementById("AddingButton").style.display = "inline";
+  document.getElementById("SaveButton").style.display = "inline";
+  document.getElementById("history-el").style.display = "block";
 
+  result.innerText = "sum :" + (num1 + num2);
   if (num1 + num2 < 21) {
     MessageEl.innerText = "get another card ?";
   }
@@ -80,17 +81,17 @@ function Save() {
 }
 
 function ajouter() {
-  result.innerText = num1 + num2;
+  result.innerText = "sum:" + (num1 + num2);
 }
 
 function soustraire() {
-  result.innerText = num1 - num2;
+  result.innerText = "minus:" + (num1 - num2);
 }
 
 function multiplier() {
-  result.innerText = num1 * num2;
+  result.innerText = "multiplied:" + num1 * num2;
 }
 
 function divisier() {
-  result.innerText = num1 / num2;
+  result.innerText = "divided:" + num1 / num2;
 }
